@@ -1,8 +1,8 @@
 print 'Using imageproc-settings'
 BS_COMPORT = 'COM4' # ron
 #BS_COMPORT = 'COM3' # duncan, ROBOPROC
-BS_BAUDRATE = 230400
-DEST_ADDR = '\x20\x52'
+BS_BAUDRATE = 57600
+DEST_ADDR = '\x21\x04'
 
 motor_gains_set = False
 steering_gains_set = False

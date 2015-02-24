@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   settings.h
  * Author: ronf
  *
@@ -8,22 +8,12 @@
 #ifndef SETTINGS_H
 #define	SETTINGS_H
 
+#define IDENT_STR "BIOMIMETICS-ROACH;AMS-ENC;"
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
-#define RONF
-// ronf robot radio addresses
-#ifdef RONF
-#define RADIO_MY_CHAN 0x13
-#define RADIO_CHANNEL 0x13 // to work with either style of channel name
-#define RADIO_PAN_ID 0x2060
-//Hard code in destination address (basestation) for now, update to be dynamic later
-#define RADIO_DST_ADDR 0x2011
-#define RADIO_DEST_ADDR RADIO_DST_ADDR
-#define RADIO_SRC_ADDR 0x2052
-#endif
+/////// Radio settings ///////
+#define RADIO_CHANNEL		0x0F
+#define RADIO_SRC_ADDR 		0x2104
+#define RADIO_PAN_ID            0x2171
 
 #define RADIO_TXPQ_MAX_SIZE   10
 #define RADIO_RXPQ_MAX_SIZE   10
@@ -35,12 +25,7 @@ extern "C" {
 #define TELEMPACKFUNC(x) vrTelemGetData(x)
 
     // specific to robot
-#define AMS_ENC_OFFSET_0 0
-#define AMS_ENC_OFFSET_1 0
-
-#ifdef	__cplusplus
-}
-#endif
-
+#define AMS_ENC_OFFSET_0 9509
+#define AMS_ENC_OFFSET_1 6568
 
 #endif	/* SETTINGS_H */
